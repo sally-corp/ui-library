@@ -1,4 +1,4 @@
-import { FC, MouseEvent, ReactElement, ReactNode } from "react";
+import { FC, MouseEvent, ReactNode } from "react";
 import { Icon } from "../Icon";
 import * as S from "./Button.styled";
 
@@ -28,7 +28,7 @@ type ButtonProps = {
   className?: string;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   size?: ButtonSize;
-  leftIcon?: ReactElement;
+  leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   disabled?: boolean;
   active?: boolean;
