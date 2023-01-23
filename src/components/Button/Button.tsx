@@ -35,7 +35,7 @@ export enum ButtonVariant {
   Text4 = "Text4",
 }
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   children,
   variant = ButtonVariant.Outline,
   className,
@@ -65,5 +65,3 @@ const Button: FC<ButtonProps> = ({
     </S.Button>
   );
 };
-
-export default Button;
