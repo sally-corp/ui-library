@@ -14,6 +14,11 @@ export const Wrapper = styled.div<{
     min-height: ${$height || $size}px;
     height: ${$height || $size}px;
 
-    ${$rotate ? `transform: rotate(${$rotate}deg)` : ""}
+    ${$rotate ? `transform: rotate(${$rotate}deg)` : ""};
+
+    svg {
+      width: inherit;
+      height: inherit;
+    }
   `}
 `;

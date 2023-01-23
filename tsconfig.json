@@ -17,8 +17,9 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "declaration": true,
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "typeRoots": ["src/react-app.d.ts"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "src/stories"]
+  "exclude": ["node_modules"]
 }

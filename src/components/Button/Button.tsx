@@ -11,19 +11,6 @@ export enum ButtonSize {
   xl = "xl",
 }
 
-interface ButtonProps {
-  children?: ReactNode;
-  variant?: ButtonVariant;
-  className?: string;
-  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
-  size?: ButtonSize;
-  leftIcon?: ReactElement;
-  rightIcon?: ReactElement;
-  disabled?: boolean;
-  active?: boolean;
-  type?: "submit" | "button";
-}
-
 export enum ButtonVariant {
   Outline = "Outline",
   Filled1 = "Filled1",
@@ -34,6 +21,19 @@ export enum ButtonVariant {
   Text3 = "Text3",
   Text4 = "Text4",
 }
+
+type ButtonProps = {
+  children?: ReactNode;
+  variant?: ButtonVariant;
+  className?: string;
+  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  size?: ButtonSize;
+  leftIcon?: ReactElement;
+  rightIcon?: ReactNode;
+  disabled?: boolean;
+  active?: boolean;
+  type?: "submit" | "button";
+};
 
 export const Button: FC<ButtonProps> = ({
   children,
