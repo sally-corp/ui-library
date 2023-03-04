@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import * as S from "./Icon.styled";
 
-interface IIcon {
+export interface IIcon {
   width?: number;
   height?: number;
   size?: number;
   rotate?: number;
   className?: string;
-  children: ReactNode;
+  icon: ReactNode;
 }
 
 export const Icon: React.FC<IIcon> = ({
@@ -16,7 +16,7 @@ export const Icon: React.FC<IIcon> = ({
   size = 20,
   rotate,
   className,
-  children,
+  icon,
 }) => {
   return (
     <S.Wrapper
@@ -26,7 +26,7 @@ export const Icon: React.FC<IIcon> = ({
       $width={width}
       className={className}
     >
-      {children}
+      {icon}
     </S.Wrapper>
   );
 };

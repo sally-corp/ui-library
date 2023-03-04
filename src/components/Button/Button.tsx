@@ -1,4 +1,4 @@
-import { FC, MouseEvent, ReactNode } from "react";
+import { FC, MouseEvent, ReactElement, ReactNode } from "react";
 import { Icon } from "../Icon";
 import * as S from "./Button.styled";
 
@@ -28,13 +28,13 @@ type ButtonProps = {
   className?: string;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   size?: ButtonSize;
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
+  leftIcon?: ReactElement;
+  rightIcon?: ReactElement;
   disabled?: boolean;
   active?: boolean;
   type?: "submit" | "button";
 };
-
+// TODO Add aria-label
 export const Button: FC<ButtonProps> = ({
   children,
   variant = ButtonVariant.Outline,
@@ -59,9 +59,9 @@ export const Button: FC<ButtonProps> = ({
       type={type}
       {...rest}
     >
-      {leftIcon && <Icon>{leftIcon}</Icon>}
+      {leftIcon && <Icon icon={leftIcon} />}
       {children}
-      {rightIcon && <Icon>{rightIcon}</Icon>}
+      {rightIcon && <Icon icon={rightIcon} />}
     </S.Button>
   );
 };
